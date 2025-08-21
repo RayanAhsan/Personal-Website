@@ -8,29 +8,32 @@ import { ExternalLink, Github, Zap, Brain, Globe, Gamepad2 } from 'lucide-react'
 import skinLesionImg from '@/assets/skin-lesion-project.jpg';
 import intellicaneImg from '@/assets/intellicane-project.jpg';
 import cardiologyBotImg from '@/assets/cardiology-bot-project.jpg';
-import transformerImg from '@/assets/transformer-project.jpg';
+import transformerImg from '@/assets/transformer-project.png';
 import f1RagImg from '@/assets/f1-rag-project.jpg';
-import raystockImg from '@/assets/raystock-project.jpg';
-import pokedexImg from '@/assets/pokedex-project.jpg';
+import raystockImg from '@/assets/RayStock.gif';
+import pokedexImg from '@/assets/Pokedex.gif';
 import speechBotImg from '@/assets/speech-bot-project.jpg';
 import sosFpgaImg from '@/assets/sos-fpga-project.jpg';
 import racingGameImg from '@/assets/racing-game-project.jpg';
+import TripSync from '@/assets/297Project.jpg';
+
 
 const PortfolioSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const projectImages = {
-    1: skinLesionImg,
-    2: intellicaneImg,
-    3: cardiologyBotImg,
-    4: transformerImg,
-    5: f1RagImg,
-    6: raystockImg,
-    7: pokedexImg,
-    8: speechBotImg,
-    9: sosFpgaImg,
-    10: racingGameImg,
-  };
+ const projectImages = {
+  1: skinLesionImg,
+  2: intellicaneImg,
+  3: cardiologyBotImg,
+  4: transformerImg,
+  5: f1RagImg,
+  6: raystockImg,
+  7: TripSync,        // Fixed: TripSync project image
+  8: pokedexImg,      // Shifted: Pokedex is now id 8 in projects array
+  9: speechBotImg,    // Shifted: Speech Bot is now id 9
+  10: sosFpgaImg,     // Shifted: SOS FPGA is now id 10
+  11: racingGameImg,  // Shifted: Racing Game is now id 11
+};
 
   const categories = [
     { id: 'all', name: 'All Projects', icon: <Zap className="w-4 h-4" /> },
@@ -48,8 +51,8 @@ const PortfolioSection = () => {
       longDescription: "Developed a comprehensive skin lesion classification system using deep learning techniques. The project involved implementing ResNet18 architecture, integrating Grad-CAM for explainable AI, and creating an intuitive Streamlit web application for medical professionals.",
       technologies: ["Python", "PyTorch", "ResNet18", "Grad-CAM", "Streamlit"],
       metrics: ["79% Test Accuracy", "Medical-grade Precision", "Real-time Inference"],
-      github: "https://github.com/RayanAhsan",
-      demo: "https://streamlit-app.com",
+      github: "https://github.com/RayanAhsan/Skin-Classification-with-Deep-Learning",
+      demo: "https://vishwaspuriofficial.github.io/SkinAI-Classifier/",
       achievements: [
         "Implemented state-of-the-art ResNet18 architecture",
         "Integrated Grad-CAM for model interpretability", 
@@ -59,13 +62,13 @@ const PortfolioSection = () => {
     },
     {
       id: 2,
-      title: "IntelliCane - AI Smart Cane",
+      title: "IntelliCane - AI Smart Cane (MakeUoft 2024 Winner)",
       category: "ml",
       description: "AI-powered smart cane with object detection for visually impaired assistance.",
       longDescription: "Revolutionary assistive technology combining computer vision with embedded systems. Features YOLOv8 object detection, Arduino-based feedback systems, and Raspberry Pi processing for real-time navigation assistance.",
       technologies: ["Python", "YOLOv8", "Arduino", "Raspberry Pi", "Computer Vision"],
       metrics: ["81% Detection Accuracy", "Real-time Processing", "Low Power Consumption"],
-      github: "https://github.com/RayanAhsan",
+      github: "https://devpost.com/software/intellicane-gjqo0a?_gl=1*cc71nv*_gcl_au*MTM1MDQxNDg3NC4xNzU1NzkxNTM3*_ga*MTM0MTg3MTM5OS4xNzU1NzkxNTM4*_ga_0YHJK3Y10M*czE3NTU3OTE1MzckbzEkZzEkdDE3NTU3OTE2MDYkajU0JGwwJGgw",
       achievements: [
         "Implemented YOLOv8 for real-time object detection",
         "Achieved 81% object detection accuracy",
@@ -81,8 +84,7 @@ const PortfolioSection = () => {
       longDescription: "Advanced conversational AI system specifically trained for cardiology consultations. Utilized Parameter-Efficient Fine-Tuning (PEFT) with QLoRA for efficient training, achieving high answer relevancy with reduced inference latency.",
       technologies: ["Python", "LLaMA-2-7B", "PEFT", "QLoRA", "JavaScript", "Medical NLP"],
       metrics: ["0.83 Answer Relevancy", "Reduced Latency", "Medical Accuracy"],
-      github: "https://github.com/RayanAhsan",
-      demo: "https://cardiology-bot.com",
+      github: "https://github.com/RayanAhsan/cardiology-ai-assistant",
       achievements: [
         "Fine-tuned LLaMA-2-7B with PEFT and QLoRA",
         "Achieved 0.83 answer relevancy score",
@@ -98,7 +100,7 @@ const PortfolioSection = () => {
       longDescription: "Complete implementation of the groundbreaking transformer architecture from the seminal paper. Built without using pre-existing transformer libraries to understand the underlying mechanisms of attention and self-attention.",
       technologies: ["Python", "PyTorch", "Transformer", "Attention Mechanism", "NLP"],
       metrics: ["BLEU Score: 25.7", "From Scratch", "Research Grade"],
-      github: "https://github.com/RayanAhsan",
+      github: "https://github.com/RayanAhsan/Building-a-Transformer-from-Scratch",
       achievements: [
         "Implemented multi-head attention mechanism",
         "Built positional encoding system",
@@ -114,8 +116,7 @@ const PortfolioSection = () => {
       longDescription: "Sophisticated chatbot combining retrieval and generation for Formula 1 queries. Uses FAISS for efficient similarity search and provides accurate answers about F1 statistics, driver information, and race data.",
       technologies: ["Python", "FAISS", "RAG", "NLP", "Vector Search"],
       metrics: ["73% Exact Match", "82% F1 Score", "Real-time Retrieval"],
-      github: "https://github.com/RayanAhsan",
-      demo: "https://f1-chatbot.com",
+      github: "https://github.com/RayanAhsan/F1-Chatbot--An-Implementation-of-Retrieval-Augmented-Generation-for-Knowledge-Intensive-NLP-Tasks-",
       achievements: [
         "Implemented FAISS vector similarity search",
         "Achieved 73% exact match accuracy",
@@ -131,8 +132,7 @@ const PortfolioSection = () => {
       longDescription: "Comprehensive inventory management solution featuring real-time analytics, dynamic dashboards, and efficient data visualization. Built with modern web technologies for scalability and performance.",
       technologies: ["Next.js", "Tailwind CSS", "PostgreSQL", "Recharts", "TypeScript"],
       metrics: ["Real-time Updates", "Scalable Architecture", "Responsive Design"],
-      github: "https://github.com/RayanAhsan",
-      demo: "https://raystock.vercel.app",
+      github: "https://github.com/RayanAhsan/RayStock--Full-Stack-Inventory-Management-Website",
       achievements: [
         "Built with Next.js and TypeScript",
         "Implemented PostgreSQL database schema",
@@ -142,14 +142,28 @@ const PortfolioSection = () => {
     },
     {
       id: 7,
+      title: "TripSync",
+      category: "web",
+      description: "Interactive GIS platform for tourists with seamless navigation and smart routing.",
+      longDescription: "Developed an interactive GIS called TripSync using OpenStreetMaps API and EZGL graphics (C++). The system is optimized for tourists, allowing lag-free navigation, filtering of key locations such as fast food, banks, and entertainment, as well as visualization of subway lines and intersections. TripSync also features a Multi-Head Dijkstra algorithm with simulated annealing to compute the shortest routes between selected points, ensuring efficient travel planning.",
+      technologies: ["C++", "OpenStreetMaps API", "EZGL", "Graph Algorithms"],
+      metrics: ["Lag-free Navigation", "Multi-Head Dijkstra Routing", "Tourist-Friendly Features"],
+      achievements: [
+        "Implemented real-time map traversal with zero lag",
+        "Added filtering for essential tourist locations",
+        "Integrated subway line and intersection visualization",
+        "Developed Multi-Head Dijkstra with annealing for shortest-path routing"
+      ]
+    },
+    {
+      id: 8,
       title: "Pokedex Application",
       category: "web",
       description: "Interactive Pokemon encyclopedia with authentication and favorites system.",
       longDescription: "Modern Pokemon encyclopedia application featuring comprehensive Pokemon data, user authentication, and personalized favorites system. Built with React and Firebase for real-time data synchronization.",
       technologies: ["React", "TypeScript", "SCSS", "Firebase", "Firestore", "Google Auth"],
       metrics: ["800+ Pokemon", "Real-time Sync", "User Authentication"],
-      github: "https://github.com/RayanAhsan",
-      demo: "https://pokedex-app.com",
+      github: "https://github.com/RayanAhsan/Pokedex",
       achievements: [
         "Implemented Google OAuth authentication",
         "Built responsive TypeScript components", 
@@ -158,15 +172,14 @@ const PortfolioSection = () => {
       ]
     },
     {
-      id: 8,
+      id: 9,
       title: "Speech Bot - Translation App",
       category: "web",
       description: "Real-time speech transcription and translation application.",
       longDescription: "Advanced speech processing application providing real-time transcription and multi-language translation. Features modern UI design and efficient backend processing for seamless user experience.",
       technologies: ["React", "Tailwind CSS", "Node.js", "Speech Recognition", "Translation API"],
       metrics: ["Real-time Processing", "Multi-language", "High Accuracy"],
-      github: "https://github.com/RayanAhsan", 
-      demo: "https://speech-bot.com",
+      github: "https://github.com/RayanAhsan/Speech-Bot", 
       achievements: [
         "Implemented real-time speech recognition",
         "Built multi-language translation system",
@@ -175,14 +188,14 @@ const PortfolioSection = () => {
       ]
     },
     {
-      id: 9,
+      id: 10,
       title: "SOS Game - FPGA Implementation",
       category: "hardware",
       description: "Advanced tic-tac-toe variant implemented on FPGA using Verilog.",
       longDescription: "Hardware implementation of the SOS game (advanced tic-tac-toe) using Verilog HDL on FPGA. Features complex game logic, user interface, and optimized hardware resource utilization.",
       technologies: ["Verilog", "FPGA", "Digital Logic", "Hardware Design"],
       metrics: ["Hardware Optimized", "Real-time Gameplay", "Low Latency"],
-      github: "https://github.com/RayanAhsan",
+      github: "https://github.com/RayanAhsan/SOS",
       achievements: [
         "Implemented complex game logic in Verilog",
         "Optimized FPGA resource utilization", 
@@ -191,14 +204,13 @@ const PortfolioSection = () => {
       ]
     },
     {
-      id: 10,
+      id: 11,
       title: "Racing Game - Multiplayer C++",
       category: "hardware", 
       description: "Multiplayer racing game with realistic physics simulation built in C++.",
       longDescription: "High-performance multiplayer racing game featuring realistic physics simulation, collision detection, and network multiplayer capabilities. Built from scratch in C++ with custom game engine components.",
       technologies: ["C++", "Game Physics", "Multiplayer", "Graphics Programming"],
       metrics: ["60+ FPS", "Realistic Physics", "Multiplayer Support"],
-      github: "https://github.com/RayanAhsan",
       achievements: [
         "Implemented realistic physics simulation",
         "Built custom collision detection system",

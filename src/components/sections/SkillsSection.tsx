@@ -162,27 +162,27 @@ const SkillsSection = () => {
       { name: "MySQL", icon: "🗄️", category: "Tools", color: "#4479A1" },
     ],
     
-    ml: [
+        ml: [
       // Languages
       { name: "Python", icon: "🐍", category: "Languages", color: "#3776AB" },
-      { name: "C++", icon: "⚙️", category: "Languages", color: "#00599C" },
-      { name: "SQL", icon: "🗃️", category: "Languages", color: "#4479A1" },
-      { name: "JavaScript", icon: "⚡", category: "Languages", color: "#F7DF1E" },
-      { name: "TypeScript", icon: "🔷", category: "Languages", color: "#3178C6" },
       { name: "R", icon: "📊", category: "Languages", color: "#276DC3" },
-      
+      { name: "SQL", icon: "🗃️", category: "Languages", color: "#4479A1" },
+      { name: "C++", icon: "⚙️", category: "Languages", color: "#00599C" },
+
       // ML Frameworks
-      { name: "PyTorch", icon: "🔥", category: "Frameworks", color: "#EE4C2C" },
-      { name: "TensorFlow", icon: "🧠", category: "Frameworks", color: "#FF6F00" },
-      { name: "Keras", icon: "🎯", category: "Frameworks", color: "#D00000" },
-      { name: "scikit-learn", icon: "📈", category: "Frameworks", color: "#F7931E" },
-      { name: "FastAPI", icon: "⚡", category: "Frameworks", color: "#009688" },
-      { name: "Flask", icon: "🍶", category: "Frameworks", color: "#000000" },
-      { name: "Django", icon: "🎯", category: "Frameworks", color: "#092E20" },
-      { name: "React", icon: "⚛️", category: "Frameworks", color: "#61DAFB" },
-      { name: "Next.js", icon: "▲", category: "Frameworks", color: "#000000" },
-      
-      // ML Tools & Libraries
+      { name: "PyTorch", icon: "🔥", category: "ML Frameworks", color: "#EE4C2C" },
+      { name: "TensorFlow", icon: "🧠", category: "ML Frameworks", color: "#FF6F00" },
+      { name: "Keras", icon: "🎯", category: "ML Frameworks", color: "#D00000" },
+
+      // Libraries
+      { name: "scikit-learn", icon: "📈", category: "Libraries", color: "#F7931E" },
+      { name: "NumPy", icon: "🔢", category: "Libraries", color: "#013243" },
+      { name: "pandas", icon: "🐼", category: "Libraries", color: "#150458" },
+      { name: "OpenCV", icon: "👁️", category: "Libraries", color: "#5C3EE8" },
+      { name: "NLTK", icon: "📝", category: "Libraries", color: "#145C3C" },
+      { name: "Hugging Face", icon: "🤗", category: "Libraries", color: "#FFD21E" },
+
+      // Tools
       { name: "Git", icon: "🌿", category: "Tools", color: "#F05032" },
       { name: "Docker", icon: "🐳", category: "Tools", color: "#2496ED" },
       { name: "MLflow", icon: "🔄", category: "Tools", color: "#0194E2" },
@@ -190,12 +190,8 @@ const SkillsSection = () => {
       { name: "SageMaker", icon: "🤖", category: "Tools", color: "#FF9900" },
       { name: "GCP", icon: "☁️", category: "Tools", color: "#4285F4" },
       { name: "Azure ML", icon: "🔵", category: "Tools", color: "#0078D4" },
-      { name: "NumPy", icon: "🔢", category: "Libraries", color: "#013243" },
-      { name: "pandas", icon: "🐼", category: "Libraries", color: "#150458" },
-      { name: "OpenCV", icon: "👁️", category: "Libraries", color: "#5C3EE8" },
-      { name: "NLTK", icon: "📝", category: "Libraries", color: "#145C3C" },
-      { name: "Hugging Face", icon: "🤗", category: "Libraries", color: "#FFD21E" },
-    ]
+    ],
+
   };
 
   const currentSkills = skillSets[activeCategory];

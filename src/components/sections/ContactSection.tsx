@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import ScrollAnimation from '../ScrollAnimation';
 import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
+import emailjs from 'emailjs-com'; // Import EmailJS
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -16,6 +17,11 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('fS5_UdmascpU3a5F7'); // Replace with your actual public key
+  }, []);
 
   const contactInfo = [
     {
@@ -59,21 +65,49 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_2be3yh6',    // Replace with your service ID
+        'template_xo9awhl',   // Replace with your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'rayan.ahsan28@gmail.com' // Your email where you want to receive messages
+        },
+        'fS5_UdmascpU3a5F7'     // Replace with your public key (optional, since initialized above)
+      );
+
+      console.log('EmailJS Result:', result);
+      
+      // Show success toast
       toast({
         title: "Message sent successfully!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
       
+      // Reset form
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
+      
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      
+      // Show error toast
+      toast({
+        title: "Failed to send message",
+        description: "Something went wrong. Please try again or email me directly.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -253,7 +287,7 @@ const ContactSection = () => {
                   <p className="text-sm text-muted-foreground">
                     Prefer a direct approach?{' '}
                     <a 
-                      href="mailto:Rayan.ahsan28@gmail.com" 
+                      href="mailto:rayan.ahsan28@gmail.com" 
                       className="text-primary hover:text-secondary transition-colors duration-300 font-medium"
                     >
                       Email me directly

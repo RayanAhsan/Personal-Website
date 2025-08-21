@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import ScrollAnimation from '../ScrollAnimation';
-import { BookOpen, Zap, Waves, Plane } from 'lucide-react';
+import { BookOpen, Zap, Waves, Plane, Download, FileText } from 'lucide-react';
 
 const AboutSection = () => {
   const interests = [
@@ -67,6 +68,42 @@ const AboutSection = () => {
                       precision, patience, and the importance of iterative improvement.
                     </p>
                   </div>
+
+                  {/* Resume Download Buttons */}
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <h4 className="text-lg font-semibold mb-4 text-center">Download My Resume</h4>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button 
+                        asChild
+                        className="btn-hero flex-1 sm:flex-none"
+                        size="lg"
+                      >
+                        <a 
+                          href="/path-to-your-swe-resume.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Software Engineering
+                        </a>
+                      </Button>
+                      <Button 
+                        asChild
+                        variant="outline"
+                        className="btn-secondary flex-1 sm:flex-none"
+                        size="lg"
+                      >
+                        <a 
+                          href="/path-to-your-ml-resume.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          <FileText className="w-4 h-4 mr-2" />
+                          Machine Learning
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </ScrollAnimation>
@@ -86,6 +123,41 @@ const AboutSection = () => {
                       <p className="text-sm text-muted-foreground">
                         Focus on machine learning, neural networks, and technology commercialization
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Alternative: Resume buttons in Education card */}
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button 
+                        asChild
+                        size="sm"
+                        className="btn-hero flex-1"
+                      >
+                        <a 
+                          href="/path-to-your-swe-resume.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          SWE Resume
+                        </a>
+                      </Button>
+                      <Button 
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="flex-1"
+                      >
+                        <a 
+                          href="/path-to-your-ml-resume.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          <FileText className="w-4 h-4 mr-2" />
+                          ML Resume
+                        </a>
+                      </Button>
                     </div>
                   </div>
                 </CardContent>
