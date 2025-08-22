@@ -1,6 +1,8 @@
 {
-  "name": "your-portfolio",
-  "homepage": "https://rayanahsan.github.io/Personal-Website/",
+  "name": "rayan-portfolio",
+  "homepage": "https://RayanAhsan.github.io/Personal-Website/",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -69,7 +71,7 @@
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "^22.16.5",
+    "@types/node": "^22.17.2",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react-swc": "^3.11.0",
@@ -80,10 +82,9 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
-    "lovable-tagger": "^1.1.9",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.38.0",
     "vite": "^7.1.3"
   }
