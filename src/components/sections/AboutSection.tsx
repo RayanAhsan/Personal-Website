@@ -31,6 +31,8 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 px-6">
       <div className="container mx-auto">
+        {/* Removed Theme Toggle Button */}
+
         <ScrollAnimation>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -79,7 +81,7 @@ const AboutSection = () => {
                         size="lg"
                       >
                         <a 
-                          href="/path-to-your-swe-resume.pdf" 
+                          href="/Rayan_Ahsan_Full_Stack_Resume.pdf" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
@@ -94,7 +96,7 @@ const AboutSection = () => {
                         size="lg"
                       >
                         <a 
-                          href="/path-to-your-ml-resume.pdf" 
+                          href="/Rayan_Ahsan_Machine_Learning_Resume.pdf" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
@@ -116,7 +118,7 @@ const AboutSection = () => {
                     <div className="border-l-4 border-primary pl-4">
                       <h4 className="font-semibold text-lg">University of Toronto</h4>
                       <p className="text-secondary">Computer Engineering (B.A.Sc.)</p>
-                      <p className="text-sm text-muted-foreground">2022 - 2026 (Expected)</p>
+                      <p className="text-sm text-muted-foreground">2023 - 2028 (Expected)</p>
                     </div>
                     <div className="border-l-4 border-secondary pl-4">
                       <h4 className="font-semibold">Minor in AI & Business Engineering</h4>
@@ -125,37 +127,66 @@ const AboutSection = () => {
                       </p>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
 
-                  {/* Alternative: Resume buttons in Education card */}
-                  <div className="mt-6 pt-4 border-t border-border">
-                    <div className="flex flex-col sm:flex-row gap-3">
+            <ScrollAnimation delay={600}>
+              <Card className="project-card">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-4">Certificates</h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-blue-500 pl-4">
+                      <h4 className="font-semibold text-lg">Azure AI Fundamentals (AI-900)</h4>
+                      <p className="text-sm text-muted-foreground">Microsoft · August 2024</p>
                       <Button 
                         asChild
                         size="sm"
-                        className="btn-hero flex-1"
+                        className="mt-2 flex-1"
                       >
                         <a 
-                          href="/path-to-your-swe-resume.pdf" 
-                          target="_blank" 
+                          href="/certificate-azure-ai-900.pdf"
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
                           <Download className="w-4 h-4 mr-2" />
-                          SWE Resume
+                          Download Certificate
                         </a>
                       </Button>
+                    </div>
+                    <div className="border-l-4 border-green-500 pl-4">
+                      <h4 className="font-semibold text-lg">MATLAB Certified</h4>
+                      <p className="text-sm text-muted-foreground">MathWorks · 2023</p>
                       <Button 
                         asChild
-                        variant="outline"
                         size="sm"
-                        className="flex-1"
+                        className="mt-2 flex-1"
                       >
                         <a 
-                          href="/path-to-your-ml-resume.pdf" 
-                          target="_blank" 
+                          href="/certificat-matlab.pdf"
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <FileText className="w-4 h-4 mr-2" />
-                          ML Resume
+                          <Download className="w-4 h-4 mr-2" />
+                          Download Certificate
+                        </a>
+                      </Button>
+                    </div>
+                    <div className="border-l-4 border-purple-500 pl-4">
+                      <h4 className="font-semibold text-lg">IBM Applied AI Professional Certificate</h4>
+                      <p className="text-sm text-muted-foreground">IBM · 2022</p>
+                      <Button 
+                        asChild
+                        size="sm"
+                        className="mt-2 flex-1"
+                      >
+                        <a 
+                          href="/certificate-ibm-applied-ai.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Download Certificate
                         </a>
                       </Button>
                     </div>

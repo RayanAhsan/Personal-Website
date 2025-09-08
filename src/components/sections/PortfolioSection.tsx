@@ -50,13 +50,13 @@ const PortfolioSection = () => {
       description: "Deep learning model for automated skin lesion diagnosis using ResNet18 architecture.",
       longDescription: "Developed a comprehensive skin lesion classification system using deep learning techniques. The project involved implementing ResNet18 architecture, integrating Grad-CAM for explainable AI, and creating an intuitive Streamlit web application for medical professionals.",
       technologies: ["Python", "PyTorch", "ResNet18", "Grad-CAM", "Streamlit"],
-      metrics: ["79% Test Accuracy", "Medical-grade Precision", "Real-time Inference"],
+      metrics: ["81.01% Test Accuracy", "Medical-grade Precision", "Real-time Inference"],
       github: "https://github.com/RayanAhsan/Skin-Classification-with-Deep-Learning",
       demo: "https://vishwaspuriofficial.github.io/SkinAI-Classifier/",
       achievements: [
         "Implemented state-of-the-art ResNet18 architecture",
         "Integrated Grad-CAM for model interpretability", 
-        "Achieved 79% accuracy on test dataset",
+        "Achieved 81.01% accuracy on test dataset",
         "Deployed production-ready Streamlit application"
       ]
     },
@@ -205,14 +205,15 @@ const PortfolioSection = () => {
     },
     {
       id: 11,
-      title: "Racing Game - Multiplayer C++",
+      title: "Racing Game - Multiplayer C",
       category: "hardware", 
-      description: "Multiplayer racing game with realistic physics simulation built in C++.",
+      description: "Multiplayer racing game with realistic physics simulation built in C.",
       longDescription: "High-performance multiplayer racing game featuring realistic physics simulation, collision detection, and network multiplayer capabilities. Built from scratch in C++ with custom game engine components.",
-      technologies: ["C++", "Game Physics", "Multiplayer", "Graphics Programming"],
+      technologies: ["C", "Game Physics", "Multiplayer", "Graphics Programming"],
       metrics: ["60+ FPS", "Realistic Physics", "Multiplayer Support"],
       achievements: [
         "Implemented realistic physics simulation",
+        "Implemented High-performance graphics rendering",
         "Built custom collision detection system",
         "Created multiplayer networking protocol", 
         "Achieved 60+ FPS performance"

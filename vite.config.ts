@@ -1,21 +1,26 @@
-import { defineConfig } from "vite"; 
-import react from "@vitejs/plugin-react-swc"; 
-import path from "path"; 
- 
-// https://vitejs.dev/config/ 
-export default defineConfig(({ mode }) => ({ 
-  base: mode === 'production' ? '/Personal-Website/' : '/', 
-  server: { 
-    host: "::", 
-    port: 8080, 
-  }, 
-  plugins: [react()], // Removed lovable-tagger
-  resolve: { 
-    alias: { 
-      "@": path.resolve(__dirname, "./src"), 
-    }, 
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+// ESM-friendly __dirname resolution
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "/Personal-Website/" : "/",
+  server: {
+    host: "::",
+    port: 8080,
+  },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
   },
 }));

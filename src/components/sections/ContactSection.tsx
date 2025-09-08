@@ -210,7 +210,7 @@ const ContactSection = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="Your full name"
+                        placeholder="Your Full Name"
                         className="transition-all duration-300 focus:border-primary"
                       />
                     </div>
