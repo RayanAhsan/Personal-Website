@@ -118,7 +118,7 @@ const AboutSection = () => {
                     <div className="border-l-4 border-primary pl-4">
                       <h4 className="font-semibold text-lg">University of Toronto</h4>
                       <p className="text-secondary">Computer Engineering (B.A.Sc.)</p>
-                      <p className="text-sm text-muted-foreground">2023 - 2028 (Expected)</p>
+                      <p className="text-sm text-muted-foreground">Sep. 2023 - Apr. 2028 (Expected)</p>
                     </div>
                     <div className="border-l-4 border-secondary pl-4">
                       <h4 className="font-semibold">Minor in AI & Business Engineering</h4>
@@ -163,7 +163,7 @@ const AboutSection = () => {
                         className="mt-2 flex-1"
                       >
                         <a 
-                          href="/certificat-matlab.pdf"
+                          href="/certificate-matlab.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
